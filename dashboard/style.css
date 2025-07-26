@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.logo{
+    margin-bottom: 10px;
+    text-align:center;
+    color:blueviolet;
+    justify-content: space-between;
+}
+
+html, body{height: 100%;}
+
+.main{
+  display: flex;
+  flex-wrap:wrap;
+  height: 100%;
+}
+
+.sidebar{
+  width: 20%;
+  height: 100%;
+  background-color: #e6e6e6;
+  margin:0;
+}
+
+.sidebar .logo {
+  width: 80%;          /* ajusta o tamanho da imagem */
+  margin-bottom: 10px; /* espaçamento abaixo da imagem */
+  margin-top: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* eixo horizontal */
+}
+
+
+.sidebar a {
+  display:block;
+  padding: 10px;
+  text-decoration: none; /* remove o underline*/
+  padding: 10px 15px;
+  /*margin-left: 15px;
+  margin-top: 5px;*/
+  color:#5e5e5e;
+}
+
+.sidebar a:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.sidebar a .sidebar-active > svg{
+  color:#999
+}
+
+.sidebar h3{
+  text-align: center;
+}
+
+.logo{
+  cursor:pointer;
+}
+.sidebar a.sidebar-active{
+  border-left: 2px,solid, ;
+  background-color: #25D281;
+  color:#ffffff;
+  padding-left: 10px; /* opcional, para afastar o conteúdo da borda */
+}
+
+.sidebar a:hover{
+  border-left: 2px,solid, ;
+  background-color: lightgray;
+  color:#ffffff;
+  color:black;
+  padding-left: 10px; /* opcional, para afastar o conteúdo da borda */
+}
+
+
+.content{
+  width: 80%;
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+}
+
+.titulo-content{
+  color:#25D281;
+  padding: 10px;
+}
+
+.box-entrada{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(45deg,#00AD5C, #25D281);
+  border-radius: 10px;
+  border-radius: 10px;
+  color:white;
+  padding:30px;
+  
+}
+
+.box-saida{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(45deg, #FF0000, #ff869a);
+  border-radius: 10px;
+  border-radius: 10px;
+  color:white;
+  padding:30px;
+}
+
+.box-saldo{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(45deg,#662CC5, #ad83f1);
+  border-radius: 10px;
+  color:white;
+  padding:30px;
+}
+
+.box-text{
+  font-size: 20px;
+}
+
+.container-boxes {
+  display: flex;
+  justify-content: space-around; /* ou space-between */
+  gap: 20px; /* opcional: espaço entre os blocos */
+  margin-top: 20px;
+}
+
+.container mt-5{
+  max-width: 400px;
+  height: 200px !important;
+
+}

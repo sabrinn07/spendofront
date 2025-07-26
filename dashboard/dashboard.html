@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spendo</title>
+    <head>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <!--<header>
+        <div class="header">
+            <div class ="logo" >
+                <h3>Spendo</h3>
+            </div>
+            <div class="icons-header">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            
+        </div>
+        <div class="info-header">
+            <img src="">
+        </div>
+    </header> -->
+    <section class = "main">
+        <div class ="sidebar">
+            <img src = "img/spendo-logo_page-0001-removebg-preview.png" class="logo">
+            <a href="#" class = "sidebar-active" ><i class="fa-brands fa-slack"></i> Dashboard</a>
+            <a href="#"><i class="fa-regular fa-money-bill-1"></i> Transações</a>
+            <a href="#"><i class="fa-solid fa-bullseye"></i> Metas</a>
+            <a href="#"><i class="fa-solid fa-clipboard-question"></i> FAQ</a>
+            <a href="#"><i class="fa-solid fa-exclamation"></i> Sobre nós</a>
+            <a href="#" class = "user-perfil"><i class="fa-solid fa-circle-user"></i> Perfil</a>
+        
+        </div> <!--sidebar-->
+        <div class="content">
+            <div class = "titulo-content" >
+                <h2>Dashboard</h2>
+            </div>
+            <div class="container-boxes">
+                <div class ="box-entrada">
+                    <div class ="box-entrada-sozinho">
+                        <div class ="box-text">
+                            <p>R$:30.000,00</p>
+                            <h6>Entradas do mês</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class ="box-saida">
+                    <div class ="box-saida-sozinho">
+                        <div class ="box-text">
+                            <p>R$:50.000,00</p>
+                            <h6>Saídas do mês</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class ="box-saldo">
+                    <div class ="box-saldo-sozinho">
+                        <div class ="box-text">
+                            <p>R$:100.000,00</p>
+                            <h6>Saldo</h6>
+                        </div>
+                    </div>
+                </div>
+            </div><!--container boxes-->
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">Despesas Planejadas x Realizadas</h2>
+                 <div class="card">
+                    <div class="card-body">
+                    <canvas id="graficoDespesas" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div><!--content-->
+    </section> <!--main-->
+<script>
+  const ctx = document.getElementById('graficoDespesas').getContext('2d');
+
+  const grafico = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+      datasets: [
+        {
+          label: 'Planejado',
+          data: [100, 800, 300, 200, 400, 800, 500, 500, 700, 900],
+          backgroundColor: 'rgba(54, 162, 235, 0.6)'
+        },
+        {
+          label: 'Realizado',
+          data: [1350, 700, 400, 350, 450, 500, 600],
+          backgroundColor: 'rgba(255, 99, 132, 0.6)'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
