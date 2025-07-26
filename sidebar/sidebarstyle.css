@@ -89,3 +89,32 @@ html, body{height: 100%;}
 .user-perfil{
   margin-top: auto;
 }
+.sidebar a:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.sidebar a .sidebar-active > svg{
+  color:#999
+}
+
+.sidebar h3{
+  text-align: center;
+}
+
+.logo{
+  cursor:pointer;
+}
+.sidebar a.sidebar-active{
+  border-left: 2px,solid, ;
+  background-color: #25D281;
+  color:#ffffff;
+  padding-left: 10px; /* opcional, para afastar o conteúdo da borda */
+}
+
+.sidebar a:hover{
+  border-left: 2px,solid, ;
+  background-color: lightgray;
+  color:#ffffff;
+  color:black;
+  padding-left: 10px; /* opcional, para afastar o conteúdo da borda */
+}
